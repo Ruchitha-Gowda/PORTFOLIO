@@ -1,49 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qualifications</title>
-    <link rel="stylesheet" href ="./style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><span>Ruchi</span>tha</a>
+  <!-- Common Header -->
+  <header class="header">
+    <a href="#" class="logo"><span>Ruchi</span>tha</a>
+    <nav class="navbar">
+      <a href="./home.html">Portfolio</a>
+      <a href="./aboutme.html">About Me</a>
+      <a href="./qualifications.html">Qualifications</a>
+      <a href="./projects.html">Projects</a>
+      <a href="./technicalskills.html">Technical Skils</a>
+    </nav>
+    <a href="./contact.html" class="contact">Contact Me</a>
+  </header>
 
-        <nav class="navbar">
-            <a href="./home.html" class="active">Portfolio</a>
-            <a href="./aboutme.html">About Me</a>
-            <a href="./qualifications.html" class="active">Qualifications</a>
-            <a href="./projects.html" class="active">Projects</a>
-            <a href="./technicalskills.html">Technical Skills</a>
-        </nav>
-        <a href="./contact.html" class="contact">Contact Me</a>
-    </header>
-
-<!-- Projects Section -->
-<section class="projects">
-    <div class="projects-container">
-      <h2>My Projects</h2>
-      <div class="project-cards">
-        <div class="project-card">
-          <i class="bx bx-ticket"></i>
-          <h3>Amusement Park Management System</h3>
+  <!-- Services Section -->
+  <section class="services">
+    <div class="services-container">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="service-card">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
           <p>
-            A user-friendly application built with HTML, CSS, PHP, and MySQL that helps users schedule visits and manage visitor records.
+            We build responsive, high-quality websites tailored to your needs.
           </p>
         </div>
-        <div class="project-card">
-          <i class="bx bxl-twitter"></i>
-          <h3>Twitter Clone</h3>
+        <div class="service-card">
+          <i class="bx bx-mobile-alt"></i>
+          <h3>Mobile App Development</h3>
           <p>
-            A streamlined Twitter clone developed using Python and Django, featuring account creation, tweeting, following, and user engagement.
+            Creating engaging mobile experiences for both iOS and Android.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="bx bx-search"></i>
+          <h3>SEO Optimization</h3>
+          <p>
+            Boost your online presence with our targeted SEO strategies.
+          </p>
+        </div>
+        <div class="service-card">
+          <i class="bx bx-customize"></i>
+          <h3>UI/UX Design</h3>
+          <p>
+            We design user-friendly interfaces that engage and convert.
           </p>
         </div>
       </div>
     </div>
   </section>
-    
+
     <!--Footer-->
     <footer class="footer">
         <div class="social">
@@ -64,7 +79,7 @@
                 <a href="./FAQ.html">FAQ</a>
             </li>
             <li>
-                <a href="./services.html">Services</a>
+                <a href="#">Services</a>
             </li>
             <li>
                 <a href="./aboutme.html">About Me</a>
@@ -76,8 +91,11 @@
                 <a href="./privacypolicy.html">Privacy Policy</a>
             </li>
         </ul>
+
         <p class="copyright"> ©️ 2024 Ruchitha | All Rights Reserved</p>
     </footer>
+
+    <!--script to pop up email-->
     <script>
         document.getElementById('gmail-icon').addEventListener('click', function() {
             var emailPopup = document.getElementById('email-popup');
