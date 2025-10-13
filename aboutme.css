@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+html, body {
+  background: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 12%;
+  background: rgba(0, 0, 0, 0.745);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+.logo span {
+  color: orangered;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar li {
+  border-bottom: none;
+}
+.navbar a {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin: 0 8px;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+  padding: 8px 10px;
+}
+.navbar a.contact {
+  padding: 10px 16px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+.navbar a:hover,
+.navbar a.active {
+  color: orangered;
+  border-bottom: 3px solid orangered;
+}
+.navbar a.contact:hover {
+  background-color: orangered;
+  color: white;
+  border: 2px solid orangered;
+}
+
+/* Hamburger defaults to hidden */
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .header {
+    padding: 25px 6%;
+  }
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 6%;
+    background: rgba(0, 0, 0, 0.98);
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px orangered;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 0;
+    z-index: 999;
+    gap: 0;
+  }
+  .navbar ul.show {
+    display: flex;
+  }
+  .navbar li {
+    width: 100%;
+  }
+  .navbar a {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 19px;
+    border-radius: 0;
+    border-bottom: none;
+    padding: 20px 18px;
+  }
+  .navbar a.contact {
+    margin-bottom: 6px;
+    margin-top: 4px;
+    width: calc(100% - 36px);
+    text-align: left;
+    padding: 10px 18px;
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 29px;
+    margin-left: auto;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+/* About Section */
+.about {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 160px;
+}
+
+.abt-img img {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    box-shadow: 0 0 25px orangered, 0 0 50px orangered;
+    border-radius: 50%;
+}
+
+.about-content h2 {
+    text-align: left;
+    color: white;
+    font-size: 42px;
+}
+
+.about-content h4 {
+    /* font-size: 62px; */
+    color: white;
+}
+
+.about-content p {
+    color: white;
+    font-size: 20px;
+    margin: 24px 0 38px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orangered;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.60);
+  width: 50px;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  padding: 40px 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+}
+
+.footer .social {
+  text-align: center;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.footer .social a {
+  font-size: 24px;
+  color: white;
+  border: 2px solid orangered;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 8px;
+  box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+  transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+  transform: scale(1.2) translateY(-10px);
+  color: orangered;
+  border: 2px solid orangered;
+}
+
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li a {
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+  border-bottom: 3px solid orangered;
+}
+
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orangered;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.60);
+  width: 50px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+  .header {
+    padding: 25px 6%;
+  }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 6%;
+    background: rgba(0, 0, 0, 0.98);
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px orangered;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 0;
+    z-index: 999;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar li {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    width: 100%;
+    font-size: 19px;
+    padding: 18px 22px;
+    text-align: left;
+    border-radius: 0;
+    border-bottom: none;
+    display: block;
+  }
+
+  .navbar a.contact {
+    margin-top: 4px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    width: calc(100% - 44px);
+    text-align: left;
+    padding: 14px 22px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 29px;
+    margin-left: auto;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+/* Media Query for Screens up to 900px */
+@media only screen and (max-width: 900px) {
+  section {
+    padding: 30px;
+    margin-bottom: 25px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 27.2px;
+  }
+
+  img {
+    width: 400px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .img-box img {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+
+  
+    /*About*/
+    .about {
+        flex-direction: column;
+        padding: 8% 4%;
+        gap: 40px;
+    }
+    .abt-img img {
+        max-width: 400px;
+    }
+    .about-content h2 {
+        font-size: 32px;
+    }
+    .about-content h3 {
+        font-size: 42px;
+    }
+    .about-content p {
+        font-size: 18px;
+    }
+
+  /* Responsive Navbar */
+  .header {
+    padding: 25px 6%;
+  }
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 6%;
+    background: rgba(0, 0, 0, 0.98);
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px orangered;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+    z-index: 999;
+    gap: 0;
+  }
+  .navbar ul.show {
+    display: flex;
+  }
+  .navbar li {
+    width: 100%;
+    margin-bottom: 10px;        /* Adds space below each nav item */
+  }
+  .navbar a {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    font-size: 19px;
+    border-radius: 0;
+    border-bottom: none;
+    padding: 18px 22px;         /* Increased vertical padding */
+    display: block;
+  }
+  .navbar a.contact {
+    margin-bottom: 10px;
+    margin-top: 4px;
+    margin-left: 20px;
+    width: calc(100% - 44px);
+    text-align: left;
+    padding: 14px 22px;         /* Matches other links */
+  }
+  .menu-toggle {
+    display: block;
+    font-size: 29px;
+    margin-left: auto;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    z-index: 1001;
+  }
+}
+
+/* Media Query for Screens up to 600px */
+@media only screen and (max-width: 600px) {
+  header,
+  section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  img {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  body {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+Menu toggle hidden by default
+.menu-toggle {
+  display: none;
+}

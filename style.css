@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    background: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+ 
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orangered;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.60);
+    width: 50px;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    padding: 40px 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: white;
+    border: 2px solid orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid orangered;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+}
+
+/* Email PopUp */
+#email-popup {
+    padding: 10px;
+    background-color: transparent; /* Transparent background */
+    border: 1px solid #ccc;
+    width: 200px;
+    font-size: 16px;
+    color: white; /* White text */
+    display: none; /* Initially hidden */
+    position: absolute;
+    bottom: 100%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%); /* Center the popup */
+    margin-bottom: 10px; /* Space between the button and popup */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+#email-popup span {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#email-popup span:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Show email popup when Gmail button is hovered */
+#gmail-icon:hover + #email-popup {
+    display: block;
+}
+/* Light color text when background is transparent */
+#email-popup {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for better contrast */
+}
+
+#email-popup span {
+    color: white; /* Default text color for dark background */
+}
+
+/* Change to light background and dark text on hover */
+#email-popup span:hover {
+    background-color: rgba(255, 255, 255, 0.6); /* Light background on hover */
+    color: black; /* Dark text on hover */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: orangered;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.60);
+    width: 50px;
+}
+
+/* Media Query for Screens up to 900px */
+@media only screen and (max-width: 900px) {
+    section {
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 27.2px;
+    }
+    img {
+        width: 400px;
+    }
+    form {
+        width: 80%;
+    }
+    .img-box img{
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+
+/*Education*/
+    .education-section {
+        padding: 50px 5%;
+    }
+
+    .edu-container {
+        padding: 20px;
+    }
+
+    .edu-container h2 {
+        font-size: 32px;
+    }
+
+    .edu-item h3 {
+        font-size: 20px;
+    }
+
+    .edu-item p {
+        font-size: 16px;
+    }
+
+    /*Projects*/
+    .projects-container h2 {
+        font-size: 32px;
+    }
+    .project-card h3 {
+        font-size: 20px;
+    }
+    .project-card p {
+        font-size: 14px;
+    }
+
+/* FAQ */
+    .faq-container {
+        padding: 20px;
+    }
+    .faq h2 {
+        font-size: 32px;
+    }
+    .faq-question {
+        font-size: 20px;
+    }
+    .faq-answer {
+        font-size: 16px;
+    }
+    /*Skills*/
+    .skills-container h2 {
+        font-size: 32px;
+    }
+    .skill-card h3 {
+        font-size: 20px;
+    }
+    .skill-card p {
+        font-size: 14px;
+    }
+
+    /*Services*/
+    .services-container h2 {
+        font-size: 32px;
+      }
+      .service-card h3 {
+        font-size: 20px;
+      }
+      .service-card p {
+        font-size: 14px;
+      }
+    }
+/* Media Query for Screens up to 600px */
+@media only screen and (max-width: 600px) {
+    header, section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    nav a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        font-size: 16px;
+    }
+    img {
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+    body {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+    form {
+        width: 100%;
+    }
+
+    /*FAQ*/
+    .ask-question {
+        padding: 15px;
+    }
+
+    .ask-question h3 {
+        font-size: 20px;
+    }
+
+    .ask-question textarea {
+        font-size: 14px;
+    }
+
+    .ask-question button.submit-btn {
+        font-size: 16px;
+    }
+
+    /*Education*/
+    .education-section {
+        padding: 40px 5%;
+    }
+
+    .edu-container h2 {
+        font-size: 28px;
+    }
+
+    .edu-item h3 {
+        font-size: 18px;
+    }
+
+    .edu-item p {
+        font-size: 15px;
+    }
+
+    /*skills*/
+    .technical-skills {
+        padding: 40px 5%;
+    }
+    .skills-container h2 {
+        font-size: 28px;
+    }
+    .skill-card h3 {
+        font-size: 18px;
+    }
+    .skill-card p {
+        font-size: 13px;
+    }
+}
